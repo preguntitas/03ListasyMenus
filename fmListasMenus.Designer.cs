@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnListas = new System.Windows.Forms.MenuStrip();
             this.ItArchivo = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,15 @@
             this.lbAlumnos = new System.Windows.Forms.ListBox();
             this.cbCursos = new System.Windows.Forms.ComboBox();
             this.lAlumnos = new System.Windows.Forms.Label();
+            this.lNuevo = new System.Windows.Forms.Label();
+            this.tbAlumno = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnListas.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -125,7 +134,7 @@
             // lCursos
             // 
             this.lCursos.AutoSize = true;
-            this.lCursos.Location = new System.Drawing.Point(47, 62);
+            this.lCursos.Location = new System.Drawing.Point(9, 69);
             this.lCursos.Name = "lCursos";
             this.lCursos.Size = new System.Drawing.Size(39, 13);
             this.lCursos.TabIndex = 2;
@@ -133,8 +142,9 @@
             // 
             // lbAlumnos
             // 
+            this.lbAlumnos.ContextMenuStrip = this.contextMenuStrip1;
             this.lbAlumnos.FormattingEnabled = true;
-            this.lbAlumnos.Location = new System.Drawing.Point(50, 122);
+            this.lbAlumnos.Location = new System.Drawing.Point(12, 129);
             this.lbAlumnos.Name = "lbAlumnos";
             this.lbAlumnos.Size = new System.Drawing.Size(120, 212);
             this.lbAlumnos.TabIndex = 3;
@@ -142,25 +152,87 @@
             // cbCursos
             // 
             this.cbCursos.FormattingEnabled = true;
-            this.cbCursos.Location = new System.Drawing.Point(50, 78);
+            this.cbCursos.Items.AddRange(new object[] {
+            "1A",
+            "1B",
+            "2A",
+            "2B",
+            "3A",
+            "3B",
+            "4A",
+            "4B"});
+            this.cbCursos.Location = new System.Drawing.Point(12, 85);
             this.cbCursos.Name = "cbCursos";
             this.cbCursos.Size = new System.Drawing.Size(121, 21);
             this.cbCursos.TabIndex = 4;
+            this.cbCursos.TextChanged += new System.EventHandler(this.cbCursos_TextChanged);
             // 
             // lAlumnos
             // 
             this.lAlumnos.AutoSize = true;
-            this.lAlumnos.Location = new System.Drawing.Point(50, 106);
+            this.lAlumnos.Location = new System.Drawing.Point(12, 113);
             this.lAlumnos.Name = "lAlumnos";
             this.lAlumnos.Size = new System.Drawing.Size(47, 13);
             this.lAlumnos.TabIndex = 5;
             this.lAlumnos.Text = "Alumnos";
+            // 
+            // lNuevo
+            // 
+            this.lNuevo.AutoSize = true;
+            this.lNuevo.Location = new System.Drawing.Point(12, 348);
+            this.lNuevo.Name = "lNuevo";
+            this.lNuevo.Size = new System.Drawing.Size(35, 13);
+            this.lNuevo.TabIndex = 6;
+            this.lNuevo.Text = "label1";
+            // 
+            // tbAlumno
+            // 
+            this.tbAlumno.Location = new System.Drawing.Point(12, 364);
+            this.tbAlumno.Name = "tbAlumno";
+            this.tbAlumno.Size = new System.Drawing.Size(100, 20);
+            this.tbAlumno.TabIndex = 7;
+            this.tbAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAlumno_KeyPress);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirToolStripMenuItem,
+            this.nuevoToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.guardarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 76);
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
             // 
             // fmListasMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbAlumno);
+            this.Controls.Add(this.lNuevo);
             this.Controls.Add(this.lAlumnos);
             this.Controls.Add(this.cbCursos);
             this.Controls.Add(this.lbAlumnos);
@@ -172,6 +244,7 @@
             this.Text = "Listas y Menus";
             this.mnListas.ResumeLayout(false);
             this.mnListas.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +265,13 @@
         private System.Windows.Forms.ListBox lbAlumnos;
         private System.Windows.Forms.ComboBox cbCursos;
         private System.Windows.Forms.Label lAlumnos;
+        private System.Windows.Forms.Label lNuevo;
+        private System.Windows.Forms.TextBox tbAlumno;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

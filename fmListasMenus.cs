@@ -71,5 +71,15 @@ namespace ListasyMenus
         {
             Close();
         }
+
+        private void cbCursos_TextChanged(object sender, EventArgs e)
+        {
+            mostrarListbox();
+        }
+
+        private void tbAlumno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
