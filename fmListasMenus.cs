@@ -273,6 +273,12 @@ namespace ListasyMenus
             lbAlumnos.Items.Clear();
         }
 
-        
+        private void itAcercade_Click(object sender, EventArgs e)
+        {
+            fmAcercade VentanaAcercade;
+            VentanaAcercade = new fmAcercade();
+            VentanaAcercade.ShowDialog(); // la queremos modal, ya que queremos tomar el control de la aplicacion.
+            VentanaAcercade.Dispose(); // ya no necesitamos el objeto, así que lo destruimos.
+        }
     }
 }

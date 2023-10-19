@@ -83,6 +83,16 @@ namespace ListasyMenus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alumno_pensante {
+            get {
+                object obj = ResourceManager.GetObject("alumno_pensante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arriba1 {
             get {
                 object obj = ResourceManager.GetObject("arriba1", resourceCulture);

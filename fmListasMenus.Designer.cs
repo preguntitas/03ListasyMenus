@@ -32,6 +32,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnListas = new System.Windows.Forms.MenuStrip();
             this.ItArchivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.itNuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.itAbrir = new System.Windows.Forms.ToolStripMenuItem();
+            this.itGuardar = new System.Windows.Forms.ToolStripMenuItem();
             this.itSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.itAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.itAcercade = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +56,6 @@
             this.btBuscar = new System.Windows.Forms.Button();
             this.btAbajo = new System.Windows.Forms.Button();
             this.btArriba = new System.Windows.Forms.Button();
-            this.itNuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.itAbrir = new System.Windows.Forms.ToolStripMenuItem();
-            this.itGuardar = new System.Windows.Forms.ToolStripMenuItem();
             this.btMostrarTodos = new System.Windows.Forms.Button();
             this.btMostrar = new System.Windows.Forms.Button();
             this.ckActualizar = new System.Windows.Forms.CheckBox();
@@ -95,11 +95,37 @@
             this.ItArchivo.Size = new System.Drawing.Size(60, 20);
             this.ItArchivo.Text = "A&rchivo";
             // 
+            // itNuevo
+            // 
+            this.itNuevo.Image = global::ListasyMenus.Properties.Resources._new;
+            this.itNuevo.Name = "itNuevo";
+            this.itNuevo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.itNuevo.Size = new System.Drawing.Size(158, 22);
+            this.itNuevo.Text = "Nuevo";
+            this.itNuevo.Click += new System.EventHandler(this.itNuevo_Click);
+            // 
+            // itAbrir
+            // 
+            this.itAbrir.Image = global::ListasyMenus.Properties.Resources.open;
+            this.itAbrir.Name = "itAbrir";
+            this.itAbrir.Size = new System.Drawing.Size(158, 22);
+            this.itAbrir.Text = "A&brir";
+            this.itAbrir.Click += new System.EventHandler(this.itAbrir_Click);
+            // 
+            // itGuardar
+            // 
+            this.itGuardar.Image = global::ListasyMenus.Properties.Resources.save;
+            this.itGuardar.Name = "itGuardar";
+            this.itGuardar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.itGuardar.Size = new System.Drawing.Size(158, 22);
+            this.itGuardar.Text = "Guardar";
+            this.itGuardar.Click += new System.EventHandler(this.itGuardar_Click);
+            // 
             // itSalir
             // 
             this.itSalir.Name = "itSalir";
             this.itSalir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.itSalir.Size = new System.Drawing.Size(180, 22);
+            this.itSalir.Size = new System.Drawing.Size(158, 22);
             this.itSalir.Text = "Salir";
             this.itSalir.Click += new System.EventHandler(this.itSalir_Click);
             // 
@@ -114,8 +140,9 @@
             // itAcercade
             // 
             this.itAcercade.Name = "itAcercade";
-            this.itAcercade.Size = new System.Drawing.Size(126, 22);
+            this.itAcercade.Size = new System.Drawing.Size(180, 22);
             this.itAcercade.Text = "Acerca de";
+            this.itAcercade.Click += new System.EventHandler(this.itAcercade_Click);
             // 
             // lCursos
             // 
@@ -287,32 +314,6 @@
             this.btArriba.TabIndex = 11;
             this.btArriba.UseVisualStyleBackColor = true;
             this.btArriba.Click += new System.EventHandler(this.btArriba_Click);
-            // 
-            // itNuevo
-            // 
-            this.itNuevo.Image = global::ListasyMenus.Properties.Resources._new;
-            this.itNuevo.Name = "itNuevo";
-            this.itNuevo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.itNuevo.Size = new System.Drawing.Size(180, 22);
-            this.itNuevo.Text = "Nuevo";
-            this.itNuevo.Click += new System.EventHandler(this.itNuevo_Click);
-            // 
-            // itAbrir
-            // 
-            this.itAbrir.Image = global::ListasyMenus.Properties.Resources.open;
-            this.itAbrir.Name = "itAbrir";
-            this.itAbrir.Size = new System.Drawing.Size(180, 22);
-            this.itAbrir.Text = "A&brir";
-            this.itAbrir.Click += new System.EventHandler(this.itAbrir_Click);
-            // 
-            // itGuardar
-            // 
-            this.itGuardar.Image = global::ListasyMenus.Properties.Resources.save;
-            this.itGuardar.Name = "itGuardar";
-            this.itGuardar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.itGuardar.Size = new System.Drawing.Size(180, 22);
-            this.itGuardar.Text = "Guardar";
-            this.itGuardar.Click += new System.EventHandler(this.itGuardar_Click);
             // 
             // btMostrarTodos
             // 
